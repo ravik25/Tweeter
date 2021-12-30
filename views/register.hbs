@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tweeter : Register</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style1.css'>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Register</h2>
+        </div>
+        <div class="status">{{msg}}</div>
+        <form id="form" class="form" action="/register" method="post" >
+            <div class="form-control">
+                <label for="firstname">First Name</label>
+                <input type="text" placeholder="" id="username firstname" name="first_name" required/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="lastname">Last Name</label>
+                <input type="text" placeholder="" id="username lastname" name="last_name" required/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+            <label for="username">Email</label>
+            <input type="email" placeholder="" id="email" name="email" required />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+            </div>
+            <div class="form-control">
+            <label for="username">Password</label>
+            <input type="password" placeholder="" id="password" name="password" required />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+            </div>
+            <button>Submit</button>
+            <button
+            onclick="window.location.href = '/login';">
+            Already a User
+            </button>
+        </form>
+        </div>
+
+</body>
+</html>
+

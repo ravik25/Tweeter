@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tweeter : Home</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <nav class="nav bg">
+        <p>
+        <a href="/">Feed</a>
+        </p>
+        <p>
+        <a href="/people">People</a>
+        </p>
+        <p>
+        <a href="/yourfeed">Edit posts</a>
+        </p>
+    </nav>
+    <div class="main container">
+        <form method="post" action="/addcontent" id="myform" class="box">
+            <textarea name="content" placeholder="What's on your mind?"></textarea>
+            <input type="submit" value="POST">
+        </form>
+    </div>
+    <div class="container">
+        {{#each posts}}
+            <div class="box">
+                <div class="name">{{this.author}}</div>
+                <div class="username">{{this.username}}</div>
+                <div class="content">{{this.content}}</div>
+                <a href="/like/{{this._id}}">
+                    <div class="like">
+                        <div class="lk">Like</div>
+                        <div class="count">{{this.likes.length}}</div>
+                    </div>
+                </a>
+            </div>
+        {{/each}}
+    </div>
+
+
+</body>
+</html>
+
