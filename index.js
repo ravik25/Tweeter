@@ -13,7 +13,7 @@ require('./config/passport')(passport);
 dotenv.config()
 
 // Databse Stuff
-const dbPath = `process.env.URL` ;
+const dbPath = process.env.URL ;
 main().catch(err => console.log(err));
 
 async function main() {
