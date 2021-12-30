@@ -6,13 +6,14 @@ const mongoose = require('mongoose');
 const app = express();
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
+const dotenv = require("dotenv")
 const flash = require('connect-flash');
 const session = require('express-session')
 require('./config/passport')(passport);
-
+dotenv.config()
 
 // Databse Stuff
-const dbPath = 'mongodb+srv://ravik25:Ravi%402505@koo.ovxtm.mongodb.net/kooclone?retryWrites=true&w=majority';
+const dbPath = process.env.URL ;
 main().catch(err => console.log(err));
 
 async function main() {
